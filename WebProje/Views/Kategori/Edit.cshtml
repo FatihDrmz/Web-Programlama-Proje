@@ -1,0 +1,42 @@
+﻿@model WebProje.Models.Model.Kategori
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("Edit", "Kategori", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <main id="main" class="main">
+
+        <h2>Kategori Bilgilerini Güncelle</h2>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="KategoriId" />
+                    <div class="form-group">
+                        <label asp-for="KategoriAd" class="control-label"></label>
+                        <input asp-for="KategoriAd" class="form-control" />
+                        <span asp-validation-for="KategoriAd" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Aciklama" class="control-label"></label>
+                        <input asp-for="Aciklama" class="form-control" />
+                        <span asp-validation-for="Aciklama" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Güncelle" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index">Geri Dön</a>
+        </div>
+    </main>
+}

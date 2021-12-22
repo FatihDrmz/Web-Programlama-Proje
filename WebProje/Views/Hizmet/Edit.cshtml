@@ -1,0 +1,43 @@
+﻿@model WebProje.Models.Model.Hizmet
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Hizmet", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <main id="main" class="main">
+
+        <div class="card-body">
+            <h5 class="card-title">Hizmet Düzenle</h5>
+
+            <!-- Browser Default Validation -->
+            <form class="row g-3" asp-action="Edit">
+                <div>
+                    <label for="validationDefault01" class="form-label">Başlık</label>
+                    <input type="text" class="form-control" id="Baslik" name="Baslik" value="@Model.Baslik" required>
+                </div>
+                <label for="validationDefault02" class="form-label">Önceki Resim</label>
+                <div>
+                    <img src="@Model.ResimURL" height="150" width="150" />
+                </div>
+                <div>
+                    <label for="validationDefault02" class="form-label">Resim</label>
+                    <input type="file" class="form-control" name="ResimURL" accept=".png,.jpg,.jpeg">
+                </div>
+                <div>
+                    <label for="validationDefault03" class="form-label">Açıklama</label>
+                    <textarea name="Aciklama" class="ckeditor" required>@Model.Aciklama</textarea>
+                </div>
+                <div>
+                    <button class="btn btn-primary" type="submit">Kaydet</button>
+                    <button class="btn btn-outline-secondary" type="button"><a href="/Hizmet/Index">İptal</a></button>
+                </div>
+            </form>
+            <!-- End Browser Default Validation -->
+
+        </div>
+    </main>
+}

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WebProje.Models.Model.Kategori>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<main id="main" class="main">
+    <h2>Kategoriler</h2>
+    <hr />
+    <p>
+        <a asp-action="Create">Yeni Oluştur</a>
+    </p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.KategoriAd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Aciklama)
+                </th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KategoriAd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Aciklama)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.KategoriId">Güncelle</a> |
+                        <a asp-action="Details" asp-route-id="@item.KategoriId">Detay</a> |
+                        <a asp-action="Delete" asp-route-id="@item.KategoriId">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</main>
