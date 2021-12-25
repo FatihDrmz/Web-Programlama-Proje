@@ -71,7 +71,7 @@ namespace WebProje.Controllers
                         WebImage img = new WebImage(LogoURL.OpenReadStream());
                         FileInfo imginfo = new FileInfo(LogoURL.FileName);
 
-                        string logoname = LogoURL.FileName + imginfo.Extension;
+                        string logoname = Guid.NewGuid().ToString() + imginfo.Extension;
                         
                         img.Resize(200, 200);
                       

@@ -1,0 +1,46 @@
+﻿@model WebProje.Models.Model.Slider
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Create", "Slider", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <main id="main" class="main">
+
+        <div class="row">
+            <h2>Slider Resim Ekle</h2>
+            <hr />
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Baslik" class="control-label"></label>
+                        <input asp-for="Baslik" class="form-control" />
+                        <span asp-validation-for="Baslik" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Aciklama" class="control-label"></label>
+                        <input asp-for="Aciklama" class="form-control" />
+                        <span asp-validation-for="Aciklama" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ResimURL" class="control-label"></label>
+                        <input type="file" name="ResimURL" class="form-control" required placeholder="Resim seçiniz" />
+                        <span asp-validation-for="ResimURL" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Ekle" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index">Geri Dön</a>
+        </div>
+
+    </main>
+}

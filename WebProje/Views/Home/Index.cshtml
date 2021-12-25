@@ -1,8 +1,181 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<WebProje.Models.Model.Hizmet> 
+
+@{
+    Layout = "_SiteLayout";
+    ViewData["Title"] = "Ana Sayfa";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown">Parme 'ye <span>Hoşgeldiniz</span></h2>
+                <p class="animate__animated animate__fadeInUp">
+                    Kurumsal web tasarımda en büyük etken, sadelik ve işleyiştir. Kurumsal internet sitesi tasarımlarında renk olarak beyaz ve gri alanların etkin kullanımı ve etkileyici olması gibi birçok detayların çok iyi bir biçimde tasarlanarak web tasarımı yapılan firmayı kurumsal ve profesyonel bir şekilde göstermesi sağlanmalıdır.
+                    Bir firmanın ne kadar kurumsal olduğu web sitesinden rahatlıkla görülebilmektedir. Web site dizaynına yeterli derecede özen ve dikkat göstermeyen kurum ya da kuruluşlar, internet sitelerini ziyaret eden ziyaretçiler tarafından olumsuz bir algıya kapılmalarına neden olmaktadır.
+                </p>
+            </div>
+        </div>
+
+        @foreach (var item in Model)
+        {
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">@item.Baslik</h2>
+                    <p class="animate__animated animate__fadeInUp">@Html.Raw(item.Aciklama)</p>
+                    <a href="/Hizmet/Index/" class="btn-get-started animate__animated animate__fadeInUp">Daha Fazlası</a>
+                </div>
+            </div>
+        }
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        </a>
+
+    </div>
+</section><!-- End Hero -->
+
+<div>
+    <main id="main">
+
+        <!-- ======= Services Section ======= -->
+        <section class="services">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+                        <div class="icon-box icon-box-pink">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4 class="title"><a href="">Blog 1</a></h4>
+                            <p class="description">“İşte yepyeni bir yıl daha kapımızı çaldı.” Sanırım bu yedi kelimelik söz dizisi gelmesi gereken asıl zaman kavramını unutmuş olmalı. Sanki bizler büyüdükçe yıllar daha hızlı akıyor, tutamıyoruz zamanı. Geçirdiğimiz yılın farkına varmadan sonraki yıla merhaba demiş oluyoruz bile. Daha geçen yıla dair yazdığım makalem dünde kalmış gibi, bayat ama küf tutmamış, hala yakın zamanın […]</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box icon-box-cyan">
+                            <div class="icon"><i class="bx bx-file"></i></div>
+                            <h4 class="title"><a href="">Blog 2</a></h4>
+                            <p class="description">Hayat, sokak aralarında saklambaç oynayan çocuklar gibi heyecanlarla dolu anılar çıkartıyor insanın karşısına! Ben çocukken mahalle aralarında gezen, çeyizlik satan, daha çok Yörük ve romanların şehir şehir gezerken kullandığı ve göçebe oldukları için yakın döneme kadar çingene damgası vurulan minibüsler vardı Şimdilerde ise sokak aralarında hurdaya bırakılmış o beyaz, kırmızı, mavi renkli minibüsler kadraja yansıyan […]</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box icon-box-green">
+                            <div class="icon"><i class="bx bx-tachometer"></i></div>
+                            <h4 class="title"><a href="">Blog 3</a></h4>
+                            <p class="description">“Kadıköy’ün arka sokaklarındaki şirin bir kafenin yeşil duvarlarına sinen şen kahkahaların yerini kendine has bir kitapta toplayan ve o kitabı beni ben yapan değerlerle büyüten kocaman kitaplığıma yerleştirdiğim harika bir hayat var elimde.” Ne kadar da uzun bir cümle değil mi? Uzun ama soluksuz, meraklı, dağınık, yaşamın arka sokaklarındaki gölgeler gibi… Birazdan başlayacak olan yağmurun […]</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box icon-box-blue">
+                            <div class="icon"><i class="bx bx-world"></i></div>
+                            <h4 class="title"><a href="">Blog 4</a></h4>
+                            <p class="description">Reklamın iyisi kötüsü olmaz tabi ki… Ortaköy sokaklarında bulunan ve bir tekstil firmasının reklam sloganı olarak kullandığı,”Bulunmaz Hint Kumaşı ” günümüzde ne üretilir ne de bulunur. Bir zamanlar Hindistan’ın ana gelir kaynağı olan ve uzun yıllar önce üretimi durdurulan söz dizisinin çok anlamlı bir geçmişi vardır. 1700’lü yıllarda Hindistan’ı sömürgeleştiren İngilizler,bölgede var olan yerli el dokumacılığına son […]</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+        <!-- ======= Why Us Section ======= -->
+        <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-6 video-box">
+                        <img src="/SiteLayout/assets/img/blog/blog-recent-4.jpg" class="img-fluid" alt="">
+                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+                    </div>
+
+                    <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                            <h4 class="title"><a href="">Hakkımızda</a></h4>
+                            <p class="description">
+                                1998 yılında "En yeni iletişim ve bilgisayar teknolojilerini kullanarak müşterilerine dünya standartlarında çözümler sunmak" ilkesiyle yola çıkan isimtescil.net, geçen 16 yıllık süreçte Dünya ve Türkiye’ye, en büyük domain ve hosting firmalarından biri olmayı başarmıştır.
+                                2008 yılında alan adları standartlarını belirleyen ve denetleyen tek otorite ICANN'e akredite olan isimtescil.net, 2010 yılından beri Türkiye'nin en büyük 500 bilişim şirketi arasında yer almakta ve kurulduğu günden buyana 1 milyonun üzerinde domain kaydı ve 200 bininin üzerinde barındırma hizmetne ev sahipliği yapmıştır.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Why Us Section -->
+        <!-- ======= Features Section ======= -->
+        <section class="features">
+                    <div class="container">
+
+                        <div class="section-title">
+                            <h2>Özellikler</h2>
+                            
+                        </div>
+
+                        <div class="row" data-aos="fade-up">
+                            <div class="col-md-5">
+                                <img src="/SiteLayout/assets/img/features-1.svg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-7 pt-4">
+                                <h3>Özellik 1</h3>
+                                <ul>
+                                    <li><i class="bi bi-check"></i>  Web sitesinin alan adı içeriğiyle alakalı olmalı ve firmayı iyi yansıtmalı</li>
+                                    <li><i class="bi bi-check"></i> Web sitesinin içeriği  geniş ve özgün içerik yapısına sahip olmalı ama karmaşık olmamalı</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row" data-aos="fade-up">
+                            <div class="col-md-5 order-1 order-md-2">
+                                <img src="/SiteLayout/assets/img/features-2.svg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-7 pt-5 order-2 order-md-1">
+                                <h3>Özellik 2</h3>
+                                <p class="fst-italic">
+                                    •Menüler, ziyaretçilerin aradıklarını kolayca bulabilecekleri şekilde tasarlanmalı
+                                    Ziyaretçilerinizin size ulaşabileceği iletişim bilgileri ve iletişim formu olmalı
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row" data-aos="fade-up">
+                            <div class="col-md-5">
+                                <img src="/SiteLayout/assets/img/features-3.svg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-7 pt-5">
+                                <h3>Özellik 2</h3>
+      
+                                <ul>
+                                    <li><i class="bi bi-check"></i> Logo ile grafik, yazı ve arka plan renkleri uyumlu olmalı</li>
+                                    <li><i class="bi bi-check"></i> Web sitesinde erişimde problem çıkartmayacak flash ve javascript uygulamaları olmalı</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row" data-aos="fade-up">
+                            <div class="col-md-5 order-1 order-md-2">
+                                <img src="/SiteLayout/assets/img/features-4.svg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-7 pt-5 order-2 order-md-1">
+                                <h3>Özellik 4</h3>
+                                <p class="fst-italic">
+                                    • Web sitesi tüm tarayıcılarda düzgün ve sorunsuz çalışmalı (w3 standartları)
+                                    Arama motorlarına uygun meta taglar ve link yapısıyla(sef link) tasarlanmalı
+                                    Google ve diğer arama motorlarına kayıt edilmiş olmalı çünkü kimsenin sitenizden haberi yoksa web siteniz ne kadar iyi olursa olsun hiç bir anlam ifade etmez.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+            </section>
+    </main>
+</div><!-- End #main -->

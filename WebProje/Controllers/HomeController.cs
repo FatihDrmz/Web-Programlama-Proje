@@ -6,27 +6,30 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using WebProje.Models.DataContext;
 
 namespace WebProje.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+     
+        private readonly KurumsalDBContext db;
+     
+        public HomeController(KurumsalDBContext context)
         {
-            _logger = logger;
+            db = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return HizmetPartial();
         }
 
-        public IActionResult Privacy()
+        public IActionResult HizmetPartial()
         {
-            return View();
+            return View(db.Hizmet.ToList());
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

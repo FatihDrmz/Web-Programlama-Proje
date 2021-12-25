@@ -120,6 +120,21 @@ namespace WebProje.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+               name: "Slider",
+               columns: table => new
+               {
+                   SliderId = table.Column<int>(type: "int", nullable: false)
+                       .Annotation("SqlServer:Identity", "1, 1"),
+                   Baslik = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                   Aciklama = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                   ResimURL = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: true)
+               },
+               constraints: table =>
+               {
+                   table.PrimaryKey("PK_Slider", x => x.SliderId);
+               });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Blog_KategoriId",
                 table: "Blog",
@@ -148,6 +163,9 @@ namespace WebProje.Migrations
 
             migrationBuilder.DropTable(
                 name: "Kategori");
+
+            migrationBuilder.DropTable(
+               name: "Slider");
         }
     }
 }

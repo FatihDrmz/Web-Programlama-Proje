@@ -201,6 +201,30 @@ namespace WebProje.Migrations
                     b.ToTable("Kimlik");
                 });
 
+            modelBuilder.Entity("WebProje.Models.Model.Slider", b =>
+                {
+                    b.Property<int>("SliderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Aciklama")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Baslik")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("ResimURL")
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("SliderId");
+
+                    b.ToTable("Slider");
+                });
+
             modelBuilder.Entity("WebProje.Models.Model.Blog", b =>
                 {
                     b.HasOne("WebProje.Models.Model.Kategori", "Kategori")

@@ -38,6 +38,25 @@ namespace WebProje.Controllers
             return View();
         }
 
+        public ActionResult Profil()
+        {
+            using (KurumsalDBContext db = new KurumsalDBContext(_optionsBuilder.Options))
+            {
+
+                var profil = db.Admin.ToList();
+                return View(profil);
+            }
+        }
+
+        public ActionResult Iletisim()
+        {
+            using (KurumsalDBContext db = new KurumsalDBContext(_optionsBuilder.Options))
+            {
+                var iletisim = db.Iletisim.ToList();
+                return View(iletisim);
+            }
+        }
+
         public ActionResult Login()
         {
             return View();
@@ -74,10 +93,10 @@ namespace WebProje.Controllers
         public ActionResult Logout()
         {
 
-            HttpContext.Session.SetString("adminid",null);
-
+            //HttpContext.Session.SetString("adminid",null);
             ViewBag.Id = HttpContext.Session.GetString("adminid");
-            HttpContext.Session.SetString("eposta", null);
+
+            //HttpContext.Session.SetString("eposta", null);
             HttpContext.Session.Clear();
             return RedirectToAction("Login", "Admin");
         }

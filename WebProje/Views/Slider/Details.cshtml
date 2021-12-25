@@ -1,0 +1,38 @@
+﻿@model WebProje.Models.Model.Slider
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<main id="main" class="main">
+    <h2>Slider Detayları</h2>
+    <hr />
+    <div>
+
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Baslik)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Baslik)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Aciklama)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ResimURL)
+            </dt>
+            <dd class="col-sm-10">
+                <img src="@Model.ResimURL" width="150" height="100" />
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.SliderId">Düzenle</a> |
+        <a asp-action="Index">Geri Dön</a>
+    </div>
+</main>

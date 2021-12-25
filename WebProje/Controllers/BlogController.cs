@@ -75,7 +75,7 @@ namespace WebProje.Controllers
             return View(blog);
         }
 
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -83,19 +83,20 @@ namespace WebProje.Controllers
             }
             using (KurumsalDBContext db = new KurumsalDBContext(_optionsBuilder.Options))
             {
-                var b = db.Blog.Where(x => x.BlogId == id).SingleOrDefault();
-                if (b == null)
+                var blog = db.Blog.Find(id);
+
+                if (blog == null)
                 {
                     return NotFound();
                 }
-                ViewBag.KategoriId = new SelectList(db.Kategori, "KategoriId", "KategoriAd", b.KategoriId);
-                return View(b);
+                ViewBag.KategoriId = new SelectList(db.Kategori, "KategoriId", "KategoriAd", blog.KategoriId);
+                return View(blog);
             }      
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, Blog blog, IFormFile ResimURL)
+        public ActionResult Edit(int? id, Blog blog, IFormFile ResimURL)
         {
 
             if (ModelState.IsValid)
