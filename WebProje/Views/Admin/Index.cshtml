@@ -9,204 +9,19 @@
         <h1>Admin Paneli</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/AdminLayout/index.html">Home</a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
+                <li class="breadcrumb-item"><a href="/AdminLayout/index.html">Anasayfa</a></li>
+                <li class="breadcrumb-item active">Panel</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
     <section class="section dashboard">
+
         <div class="row">
 
             <!-- Left side columns -->
             <div class="col-lg-8">
                 <div class="row">
-
-                    <!-- Sales Card -->
-                    <div class="col-xxl-4 col-md-6">
-                        <div class="card info-card sales-card">
-
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="card-body">
-                                <h5 class="card-title">Sales <span>| Today</span></h5>
-
-                                <div class="d-flex align-items-center">
-                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-cart"></i>
-                                    </div>
-                                    <div class="ps-3">
-                                        <h6>145</h6>
-                                        <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div><!-- End Sales Card -->
-                    <!-- Revenue Card -->
-                    <div class="col-xxl-4 col-md-6">
-                        <div class="card info-card revenue-card">
-
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="card-body">
-                                <h5 class="card-title">Revenue <span>| This Month</span></h5>
-
-                                <div class="d-flex align-items-center">
-                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-currency-dollar"></i>
-                                    </div>
-                                    <div class="ps-3">
-                                        <h6>$3,264</h6>
-                                        <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div><!-- End Revenue Card -->
-                    <!-- Customers Card -->
-                    <div class="col-xxl-4 col-xl-12">
-
-                        <div class="card info-card customers-card">
-
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="card-body">
-                                <h5 class="card-title">Customers <span>| This Year</span></h5>
-
-                                <div class="d-flex align-items-center">
-                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-people"></i>
-                                    </div>
-                                    <div class="ps-3">
-                                        <h6>1244</h6>
-                                        <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div><!-- End Customers Card -->
-                    <!-- Reports -->
-                    <div class="col-12">
-                        <div class="card">
-
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="card-body">
-                                <h5 class="card-title">Reports <span>/Today</span></h5>
-
-                                <!-- Line Chart -->
-                                <div id="reportsChart"></div>
-
-                                <script>
-                                    document.addEventListener("DOMContentLoaded", () => {
-                                        new ApexCharts(document.querySelector("#reportsChart"), {
-                                            series: [{
-                                                name: 'Sales',
-                                                data: [31, 40, 28, 51, 42, 82, 56],
-                                            }, {
-                                                name: 'Revenue',
-                                                data: [11, 32, 45, 32, 34, 52, 41]
-                                            }, {
-                                                name: 'Customers',
-                                                data: [15, 11, 32, 18, 9, 24, 11]
-                                            }],
-                                            chart: {
-                                                height: 350,
-                                                type: 'area',
-                                                toolbar: {
-                                                    show: false
-                                                },
-                                            },
-                                            markers: {
-                                                size: 4
-                                            },
-                                            colors: ['#4154f1', '#2eca6a', '#ff771d'],
-                                            fill: {
-                                                type: "gradient",
-                                                gradient: {
-                                                    shadeIntensity: 1,
-                                                    opacityFrom: 0.3,
-                                                    opacityTo: 0.4,
-                                                    stops: [0, 90, 100]
-                                                }
-                                            },
-                                            dataLabels: {
-                                                enabled: false
-                                            },
-                                            stroke: {
-                                                curve: 'smooth',
-                                                width: 2
-                                            },
-                                            xaxis: {
-                                                type: 'datetime',
-                                                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-                                            },
-                                            tooltip: {
-                                                x: {
-                                                    format: 'dd/MM/yy HH:mm'
-                                                },
-                                            }
-                                        }).render();
-                                    });
-                                </script>
-                                <!-- End Line Chart -->
-
-                            </div>
-
-                        </div>
-                    </div><!-- End Reports -->
-                    <!-- Recent Sales -->
+                   
                     <div class="col-12">
                         <div class="card recent-sales">
 
@@ -214,64 +29,38 @@
                                 <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                     <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
+                                        <h6>İşlem</h6>
                                     </li>
 
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    <li><a class="dropdown-item" href="/Kategori/Edit/1/">Güncelle</a></li>
+                                    <li><a class="dropdown-item" href="/Kategori/Details/1/">Detay</a></li>
+                                    <li><a class="dropdown-item" href="/Kategori/Delete/1/">Sil</a></li>
                                 </ul>
                             </div>
 
                             <div class="card-body">
-                                <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+                                <h5 class="card-title">Kategori <span>| Detay</span></h5>
 
                                 <table class="table table-borderless datatable">
                                     <thead>
                                         <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Customer</th>
-                                            <th scope="col">Product</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Status</th>
+                                            <th scope="col">Kategori Id</th>
+                                            <th scope="col">Kategori</th>
+                                            <th scope="col">Açıklama</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row"><a href="#">#2457</a></th>
-                                            <td>Brandon Jacob</td>
-                                            <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                                            <td>$64</td>
-                                            <td><span class="badge bg-success">Approved</span></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><a href="#">#2147</a></th>
-                                            <td>Bridie Kessler</td>
-                                            <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
-                                            <td>$47</td>
-                                            <td><span class="badge bg-warning">Pending</span></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><a href="#">#2049</a></th>
-                                            <td>Ashleigh Langosh</td>
-                                            <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
-                                            <td>$147</td>
-                                            <td><span class="badge bg-success">Approved</span></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><a href="#">#2644</a></th>
-                                            <td>Angus Grady</td>
-                                            <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
-                                            <td>$67</td>
-                                            <td><span class="badge bg-danger">Rejected</span></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><a href="#">#2644</a></th>
-                                            <td>Raheem Lehner</td>
-                                            <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
-                                            <td>$165</td>
-                                            <td><span class="badge bg-success">Approved</span></td>
-                                        </tr>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <th scope="row"><a href="#">#@item.KategoriId</a></th>
+                                                <td>@item.KategoriAd</td>
+                                                <td class="text-primary">@item.Aciklama</td>
+
+                                            </tr>
+                                        }
+
                                     </tbody>
                                 </table>
 
@@ -279,7 +68,7 @@
 
                         </div>
                     </div><!-- End Recent Sales -->
-                    <!-- Top Selling -->
+                    
                     <div class="col-12">
                         <div class="card top-selling">
 
@@ -287,63 +76,51 @@
                                 <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                     <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
+                                        <h6>İşlem</h6>
                                     </li>
 
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    <li><a class="dropdown-item" href="/Slider/Edit/1/">Güncelle</a></li>
+                                    <li><a class="dropdown-item" href="/Slider/Details/1/">Detay</a></li>
+                                    <li><a class="dropdown-item" href="/Slider/Delete/1/">Sil</a></li>
                                 </ul>
                             </div>
 
                             <div class="card-body pb-0">
-                                <h5 class="card-title">Top Selling <span>| Today</span></h5>
+                                <h5 class="card-title">Slider <span>| Detay</span></h5>
 
                                 <table class="table table-borderless">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Preview</th>
-                                            <th scope="col">Product</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Sold</th>
-                                            <th scope="col">Revenue</th>
+                                            <th scope="col">Ön İzleme</th>
+                                            <th scope="col">Slider</th>
+                                            <th scope="col">Açıklama</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+
+
                                         <tr>
-                                            <th scope="row"><a href="#"><img src="/AdminLayout/assets/img/product-1.jpg" alt=""></a></th>
-                                            <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
-                                            <td>$64</td>
-                                            <td class="fw-bold">124</td>
-                                            <td>$5,828</td>
+                                            <th scope="row"><a href="#"><img src="/AdminLayout/assets/img/slides-1.jpg" alt=""></a></th>
+                                            <td><a href="#" class="text-primary fw-bold">Özellik 1</a></td>
+                                            <td>Web sitesinin alan adı içerik</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"><a href="#"><img src="/AdminLayout/assets/img/product-2.jpg" alt=""></a></th>
-                                            <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
-                                            <td>$46</td>
-                                            <td class="fw-bold">98</td>
-                                            <td>$4,508</td>
+                                            <th scope="row"><a href="#"><img src="/AdminLayout/assets/img/slides-2.jpg" alt=""></a></th>
+                                            <td><a href="#" class="text-primary fw-bold">Özellik 2</a></td>
+                                            <td>Menüler, ziyaretçilerin aradıkları</td>
+
                                         </tr>
                                         <tr>
-                                            <th scope="row"><a href="#"><img src="/AdminLayout/assets/img/product-3.jpg" alt=""></a></th>
-                                            <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
-                                            <td>$59</td>
-                                            <td class="fw-bold">74</td>
-                                            <td>$4,366</td>
+                                            <th scope="row"><a href="#"><img src="/AdminLayout/assets/img/slides-3.jpg" alt=""></a></th>
+                                            <td><a href="#" class="text-primary fw-bold">Özellik 3</a></td>
+                                            <td>Logo ile grafik, yazı</td>
+
                                         </tr>
                                         <tr>
-                                            <th scope="row"><a href="#"><img src="/AdminLayout/assets/img/product-4.jpg" alt=""></a></th>
-                                            <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
-                                            <td>$32</td>
-                                            <td class="fw-bold">63</td>
-                                            <td>$2,016</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><a href="#"><img src="/AdminLayout/assets/img/product-5.jpg" alt=""></a></th>
-                                            <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a></td>
-                                            <td>$79</td>
-                                            <td class="fw-bold">41</td>
-                                            <td>$3,239</td>
+                                            <th scope="row"><a href="#"><img src="/AdminLayout/assets/img/card.jpg" alt=""></a></th>
+                                            <td><a href="#" class="text-primary fw-bold">Özellik 4</a></td>
+                                            <td>Web sitesi tüm tarayıcılarda</td>
+
                                         </tr>
                                     </tbody>
                                 </table>
@@ -353,8 +130,64 @@
                         </div>
                     </div><!-- End Top Selling -->
 
-                </div>
-            </div><!-- End Left side columns -->
+                    <div class="card">
+
+                        <div class="filter">
+                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <li class="dropdown-header text-start">
+                                    <h6>İşlem</h6>
+                                </li>
+
+                                <li><a class="dropdown-item" href="/Blog/Index/">Blog sayfası</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="card-body pb-0">
+                            <h5 class="card-title">Güncel &amp; Bloglar <span>| Detay</span></h5>
+
+                            <div class="news">
+                                <div class="post-item clearfix">
+                                    <img src="/AdminLayout/assets/img/news-1.jpg" alt="">
+                                    <h4><a href="#">Blog 1</a></h4>
+                                    <p>
+                                        “İşte yepyeni bir yıl daha kapımızı çaldı.” Sanırım bu yedi kelimelik söz dizisi gelmesi gereken asıl zaman kavramını unutmuş olmalı. Sanki bizler büyüdükçe yıllar daha hızlı akıyor, tutamıyoruz zamanı. Geçirdiğimiz yılın farkına varmadan sonraki yıla merhaba demiş oluyoruz bile. Daha geçen yıla dair yazdığım makalem dünde kalmış gibi, bayat ama küf tutmamış, hala yakın zamanın […]
+                                    </p>
+                                </div>
+
+                                <div class="post-item clearfix">
+                                    <img src="/AdminLayout/assets/img/news-2.jpg" alt="">
+                                    <h4><a href="#">Blog 2</a></h4>
+                                    <p>
+                                        Hayat, sokak aralarında saklambaç oynayan çocuklar gibi heyecanlarla dolu anılar çıkartıyor insanın karşısına! Ben çocukken mahalle aralarında gezen, çeyizlik satan, daha çok Yörük ve romanların şehir şehir gezerken kullandığı ve göçebe oldukları için yakın döneme kadar çingene damgası vurulan minibüsler vardı Şimdilerde ise sokak aralarında hurdaya bırakılmış o beyaz, kırmızı, mavi renkli minibüsler kadraja yansıyan […]
+                                    </p>
+                                </div>
+
+                                <div class="post-item clearfix">
+                                    <img src="/AdminLayout/assets/img/news-3.jpg" alt="">
+                                    <h4><a href="#">Blog 3<a></h4>
+                                    <p>
+                                        “Kadıköy’ün arka sokaklarındaki şirin bir kafenin yeşil duvarlarına sinen şen kahkahaların yerini kendine has bir kitapta toplayan ve o kitabı beni ben yapan değerlerle büyüten kocaman kitaplığıma yerleştirdiğim harika bir hayat var elimde.” Ne kadar da uzun bir cümle değil mi? Uzun ama soluksuz, meraklı, dağınık, yaşamın arka sokaklarındaki gölgeler gibi… Birazdan başlayacak olan yağmurun […]
+                                    </p>
+                                </div>
+
+                                <div class="post-item clearfix">
+                                    <img src="/AdminLayout/assets/img/news-4.jpg" alt="">
+                                    <h4><a href="#">Blog 4</a></h4>
+                                    <p>
+                                        Reklamın iyisi kötüsü olmaz tabi ki… Ortaköy sokaklarında bulunan ve bir tekstil firmasının reklam sloganı olarak kullandığı,”Bulunmaz Hint Kumaşı ” günümüzde ne üretilir ne de bulunur. Bir zamanlar Hindistan’ın ana gelir kaynağı olan ve uzun yıllar önce üretimi durdurulan söz dizisinin çok anlamlı bir geçmişi vardır. 1700’lü yıllarda Hindistan’ı sömürgeleştiren İngilizler,bölgede var olan yerli el dokumacılığına son […]
+                                    </p>
+                                </div>
+
+                            </div><!-- End sidebar recent posts-->
+
+                        </div>
+                    </div><!-- End News & Updates -->
+
+                </div><!-- End Left side columns -->
+
+
+            </div>
             <!-- Right side columns -->
             <div class="col-lg-4">
 
@@ -364,65 +197,55 @@
                         <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                             <li class="dropdown-header text-start">
-                                <h6>Filter</h6>
+                                <h6>İşlem</h6>
                             </li>
 
-                            <li><a class="dropdown-item" href="#">Today</a></li>
-                            <li><a class="dropdown-item" href="#">This Month</a></li>
-                            <li><a class="dropdown-item" href="#">This Year</a></li>
+                            <li><a class="dropdown-item" href="/Hizmet/Edit/1/">Güncelle</a></li>
+                            <li><a class="dropdown-item" href="/Hizmet/Details/1/">Detay</a></li>
+                            <li><a class="dropdown-item" href="/Hizmet/Delete/1/">Sil</a></li>
                         </ul>
                     </div>
 
                     <div class="card-body">
-                        <h5 class="card-title">Recent Activity <span>| Today</span></h5>
+                        <h5 class="card-title">Hizmet <span>| Detay</span></h5>
 
                         <div class="activity">
 
                             <div class="activity-item d-flex">
-                                <div class="activite-label">32 min</div>
-                                <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
-                                <div class="activity-content">
-                                    Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae
-                                </div>
-                            </div><!-- End activity item-->
-
-                            <div class="activity-item d-flex">
-                                <div class="activite-label">56 min</div>
+                                <div class="activite-label">Özgün</div>
                                 <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
                                 <div class="activity-content">
-                                    Voluptatem blanditiis blanditiis eveniet
+                                    Kurumsal internet siteleri, şirketlerin internette itibarını belirler.
+                                    Firmalar ürün ya da hizmetlerini sunmak için profesyonel bir ekibi olan firmalar, internet sitelerini yaptırmalıdırlar.
+                                    Firmanın kurumsal logosu şirketi en iyi şekilde yansıtmalıdır. Firmanın sahip olduğu logo, şirketi her zaman en iyi şekilde göstermelidir.
                                 </div>
                             </div><!-- End activity item-->
 
                             <div class="activity-item d-flex">
-                                <div class="activite-label">2 hrs</div>
+                                <div class="activite-label">Kalite</div>
                                 <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
                                 <div class="activity-content">
-                                    Voluptates corrupti molestias voluptatem
+                                    Kurumsal web sitesi; öncelikle mobil uyumlu bir web sitesi olmalıdır.
+                                    Web sitenizi güncel tutabilmeniz için mutlaka bir yönetim paneli yazılımına sahip olmanız ve arama motorlarına optimize edilmiş bir altyapı olmalıdır.katılarak), çeşitli sürümleri geliştirilmiştir.
                                 </div>
                             </div><!-- End activity item-->
 
                             <div class="activity-item d-flex">
-                                <div class="activite-label">1 day</div>
+                                <div class="activite-label">
+                                    Güncellik
+                                </div>
                                 <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
                                 <div class="activity-content">
-                                    Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore
+                                    Web sitesinin güncel kalabilmesi ve uzun süreli web sitesi bakımı konusunda etkin destek alınabilecek bir web tasarım firması tarafından hazırlanmış olmasıdır.
+                                    Zaman içerisinde bir yakınına, şirket çalışanına kurumsal web sitesi yaptırarak istediğine değil ortaya çıkan web tasarımına razı olmak zorunda kalmış onlarca hatta yüzlerce kurumsal firma vardır.
                                 </div>
                             </div><!-- End activity item-->
 
                             <div class="activity-item d-flex">
-                                <div class="activite-label">2 days</div>
+                                <div class="activite-label">Öncülük</div>
                                 <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
                                 <div class="activity-content">
-                                    Est sit eum reiciendis exercitationem
-                                </div>
-                            </div><!-- End activity item-->
-
-                            <div class="activity-item d-flex">
-                                <div class="activite-label">4 weeks</div>
-                                <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
-                                <div class="activity-content">
-                                    Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
+                                    Kurumsal web siteleri marka bilinirliğini artırmaya önemli ölçüde yardımcı olabilir. Markanın rekabette öne çıkması için fırsat yaratır, görsel katılım ve markanın mesajını iletme yeteneği ile kalıcı bir ilk izlenim yaratabilir.
                                 </div>
                             </div><!-- End activity item-->
 
@@ -430,213 +253,10 @@
 
                     </div>
                 </div><!-- End Recent Activity -->
-                <!-- Budget Report -->
-                <div class="card">
-                    <div class="filter">
-                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                            <li class="dropdown-header text-start">
-                                <h6>Filter</h6>
-                            </li>
-
-                            <li><a class="dropdown-item" href="#">Today</a></li>
-                            <li><a class="dropdown-item" href="#">This Month</a></li>
-                            <li><a class="dropdown-item" href="#">This Year</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="card-body pb-0">
-                        <h5 class="card-title">Budget Report <span>| This Month</span></h5>
-
-                        <div id="budgetChart" style="min-height: 400px;" class="echart"></div>
-
-                        <script>
-                            document.addEventListener("DOMContentLoaded", () => {
-                                var budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({
-                                    legend: {
-                                        data: ['Allocated Budget', 'Actual Spending']
-                                    },
-                                    radar: {
-                                        // shape: 'circle',
-                                        indicator: [{
-                                            name: 'Sales',
-                                            max: 6500
-                                        },
-                                        {
-                                            name: 'Administration',
-                                            max: 16000
-                                        },
-                                        {
-                                            name: 'Information Technology',
-                                            max: 30000
-                                        },
-                                        {
-                                            name: 'Customer Support',
-                                            max: 38000
-                                        },
-                                        {
-                                            name: 'Development',
-                                            max: 52000
-                                        },
-                                        {
-                                            name: 'Marketing',
-                                            max: 25000
-                                        }
-                                        ]
-                                    },
-                                    series: [{
-                                        name: 'Budget vs spending',
-                                        type: 'radar',
-                                        data: [{
-                                            value: [4200, 3000, 20000, 35000, 50000, 18000],
-                                            name: 'Allocated Budget'
-                                        },
-                                        {
-                                            value: [5000, 14000, 28000, 26000, 42000, 21000],
-                                            name: 'Actual Spending'
-                                        }
-                                        ]
-                                    }]
-                                });
-                            });
-                        </script>
-
-                    </div>
-                </div><!-- End Budget Report -->
-                <!-- Website Traffic -->
-                <div class="card">
-                    <div class="filter">
-                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                            <li class="dropdown-header text-start">
-                                <h6>Filter</h6>
-                            </li>
-
-                            <li><a class="dropdown-item" href="#">Today</a></li>
-                            <li><a class="dropdown-item" href="#">This Month</a></li>
-                            <li><a class="dropdown-item" href="#">This Year</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="card-body pb-0">
-                        <h5 class="card-title">Website Traffic <span>| Today</span></h5>
-
-                        <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
-
-                        <script>
-                            document.addEventListener("DOMContentLoaded", () => {
-                                echarts.init(document.querySelector("#trafficChart")).setOption({
-                                    tooltip: {
-                                        trigger: 'item'
-                                    },
-                                    legend: {
-                                        top: '5%',
-                                        left: 'center'
-                                    },
-                                    series: [{
-                                        name: 'Access From',
-                                        type: 'pie',
-                                        radius: ['40%', '70%'],
-                                        avoidLabelOverlap: false,
-                                        label: {
-                                            show: false,
-                                            position: 'center'
-                                        },
-                                        emphasis: {
-                                            label: {
-                                                show: true,
-                                                fontSize: '18',
-                                                fontWeight: 'bold'
-                                            }
-                                        },
-                                        labelLine: {
-                                            show: false
-                                        },
-                                        data: [{
-                                            value: 1048,
-                                            name: 'Search Engine'
-                                        },
-                                        {
-                                            value: 735,
-                                            name: 'Direct'
-                                        },
-                                        {
-                                            value: 580,
-                                            name: 'Email'
-                                        },
-                                        {
-                                            value: 484,
-                                            name: 'Union Ads'
-                                        },
-                                        {
-                                            value: 300,
-                                            name: 'Video Ads'
-                                        }
-                                        ]
-                                    }]
-                                });
-                            });
-                        </script>
-
-                    </div>
-                </div><!-- End Website Traffic -->
                 <!-- News & Updates Traffic -->
-                <div class="card">
-                    <div class="filter">
-                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                            <li class="dropdown-header text-start">
-                                <h6>Filter</h6>
-                            </li>
-
-                            <li><a class="dropdown-item" href="#">Today</a></li>
-                            <li><a class="dropdown-item" href="#">This Month</a></li>
-                            <li><a class="dropdown-item" href="#">This Year</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="card-body pb-0">
-                        <h5 class="card-title">News &amp; Updates <span>| Today</span></h5>
-
-                        <div class="news">
-                            <div class="post-item clearfix">
-                                <img src="/AdminLayout/assets/img/news-1.jpg" alt="">
-                                <h4><a href="#">Nihil blanditiis at in nihil autem</a></h4>
-                                <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
-                            </div>
-
-                            <div class="post-item clearfix">
-                                <img src="/AdminLayout/assets/img/news-2.jpg" alt="">
-                                <h4><a href="#">Quidem autem et impedit</a></h4>
-                                <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...</p>
-                            </div>
-
-                            <div class="post-item clearfix">
-                                <img src="/AdminLayout/assets/img/news-3.jpg" alt="">
-                                <h4><a href="#">Id quia et et ut maxime similique occaecati ut</a></h4>
-                                <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...</p>
-                            </div>
-
-                            <div class="post-item clearfix">
-                                <img src="/AdminLayout/assets/img/news-4.jpg" alt="">
-                                <h4><a href="#">Laborum corporis quo dara net para</a></h4>
-                                <p>Qui enim quia optio. Eligendi aut asperiores enim repellendusvel rerum cuder...</p>
-                            </div>
-
-                            <div class="post-item clearfix">
-                                <img src="/AdminLayout/assets/img/news-5.jpg" alt="">
-                                <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>
-                                <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos eius...</p>
-                            </div>
-
-                        </div><!-- End sidebar recent posts-->
-
-                    </div>
-                </div><!-- End News & Updates -->
+              
 
             </div><!-- End Right side columns -->
-
-        </div>
-    </section>
+</section>
 </main>
 

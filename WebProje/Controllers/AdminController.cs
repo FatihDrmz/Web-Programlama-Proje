@@ -35,7 +35,11 @@ namespace WebProje.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            using (KurumsalDBContext db = new KurumsalDBContext(_optionsBuilder.Options))
+            {
+                var kategori = db.Kategori.ToList();
+                return View(kategori);
+            }
         }
 
         public ActionResult Profil()
