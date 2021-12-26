@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.Helpers;
 using WebProje.Models.DataContext;
@@ -60,50 +63,67 @@ namespace WebProje.Controllers
                 return View(iletisim);
             }
         }
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(Admin admin)
+        {
+            if (ModelState.IsValid)
+            {
+                using (KurumsalDBContext db = new KurumsalDBContext(_optionsBuilder.Options))
+                {
+                    db.Admin.Add(admin);
+                    db.SaveChanges();
+                    return RedirectToAction("Index", "Admin");
+                }
+            }
+            return View(admin);
+        }
 
         public ActionResult Login()
         {
             return View();
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult Login(Admin admin)
         {
             using (KurumsalDBContext db = new KurumsalDBContext(_optionsBuilder.Options))
             {
 
-                var login = db.Admin.Where(x => x.Eposta == admin.Eposta).SingleOrDefault();
-                if (login.Eposta == admin.Eposta && login.Sifre == admin.Sifre)
+                var login = db.Admin.FirstOrDefault(x => x.Eposta == admin.Eposta && x.Sifre == admin.Sifre);
+                if (login != null) 
                 {
-
-                    HttpContext.Session.SetInt32("adminid", login.AdminId);
-                    ViewData["admin"] = HttpContext.Session.GetInt32("adminid");
-
-                    HttpContext.Session.SetString("eposta", login.Eposta);
-                    ViewData["Eposta"] = HttpContext.Session.GetString("eposta");
-
-                    HttpContext.Session.SetString("yetki", login.Yetki);
-
+                    var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Name,admin.Eposta)
+                    };
+                    var useridenty = new ClaimsIdentity(claims,"Login");
+                    ViewData["Eposta"] = claims;
+                    ClaimsPrincipal principal = new ClaimsPrincipal(useridenty);
+                    HttpContext.SignInAsync(principal);
                     return RedirectToAction("Index", "Admin");
                 }
                 else
                 {
                     ViewBag.Uyari = "E-postanız yada şifreniz yanlış";
                 }
-                return View(admin);
             }
+            return View();
         }
 
+        [HttpGet]
         public ActionResult Logout()
         {
-
-            //HttpContext.Session.SetString("adminid",null);
-            ViewBag.Id = HttpContext.Session.GetString("adminid");
-
-            //HttpContext.Session.SetString("eposta", null);
-            HttpContext.Session.Clear();
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login", "Admin");
         }
+
 
     }
 }

@@ -345,3 +345,4 @@ C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\Razor\Vie
 C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\WebProje.csproj.AssemblyReference.cache
 C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\Razor\Views\Admin\Profil.cshtml.g.cs
 C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\Razor\Views\Admin\Iletisim.cshtml.g.cs
+C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\Razor\Views\Admin\Register.cshtml.g.cs
