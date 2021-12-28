@@ -346,4 +346,10 @@ C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\WebProje.
 C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\Razor\Views\Admin\Profil.cshtml.g.cs
 C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\Razor\Views\Admin\Iletisim.cshtml.g.cs
 C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\Razor\Views\Admin\Register.cshtml.g.cs
-C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\Razor\Views\MultiLanguages\Index.cshtml.g.cs
+C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\bin\Debug\net5.0\en-US\WebProje.resources.dll
+C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\bin\Debug\net5.0\tr-TR\WebProje.resources.dll
+C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\WebProje.Resources.SharedResource.en-US.resources
+C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\WebProje.Resources.SharedResource.tr-TR.resources
+C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\WebProje.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\en-US\WebProje.resources.dll
+C:\Users\PC\Desktop\Web Programlama\WebProje\WebProje\obj\Debug\net5.0\tr-TR\WebProje.resources.dll

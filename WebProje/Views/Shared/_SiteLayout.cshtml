@@ -35,6 +35,9 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
 </head>
+
+@*@inject LanguageService language*@
+
 <body>
 
     <!-- ======= Header ======= -->
@@ -49,7 +52,7 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="active " href="/Home/Index/">Anasayfa</a></li>
+                    <li><a class="active " href="/Home/Index/">Anasayfa @*@language.Getkey("home")*@</a></li>
                     <li><a href="#hakkimizda">Hakkımızda</a></li>
                     <li><a href="/Home/Index/">Hizmetlerimiz</a></li>
                     <li class="dropdown">
@@ -60,12 +63,26 @@
                         </ul>
                     </li>
                     <li><a href="#iletisim">İletişim</a></li>
-                    <li><a href="/Admin/Login/" class="button-a-background">
-                        <b class="bi bi-box-arrow-in-right">Oturum Aç</b></a>
+                    <li>
+                        <a href="/Admin/Login/" class="button-a-background">
+                            <b class="bi bi-box-arrow-in-right"> Oturum Aç</b>
+                        </a>
                     </li>
 
-                    <li><a href="/Admin/Register/" class="button-a-background">
-                        <b class="bi bi-person">Kayıt Ol</b></a>
+                    <li>
+                        <a href="/Admin/Register/" class="button-a-background">
+                            <b class="bi bi-person"> Kayıt Ol</b>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span><b class="bi-flag"> Dil</b></span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+
+                            <li><a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="en-US" class="nav-link"> English</a></li>
+
+                            <li><a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="tr-TR" class="nav-link"> Türkçe</a></li>
+
+                        </ul>
                     </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -80,7 +97,7 @@
     <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
 
 
-        <div class="footer-top"  id="iletisim">
+        <div class="footer-top" id="iletisim">
             <div class="container">
                 <div class="row">
 
@@ -130,7 +147,7 @@
                 &copy; <strong><span>Parme</span></strong> Tüm Hakları Gizlidir
             </div>
             <div class="credits">
-              
+
                 Designed by <a href="https://www.sakarya.edu.tr/">Fatihdrmz</a>
             </div>
         </div>

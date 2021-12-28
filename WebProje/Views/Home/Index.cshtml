@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebProje.Models.Model.Hizmet> 
+﻿@model IEnumerable<WebProje.Models.Model.Hizmet>
 
 @{
     Layout = "_SiteLayout";
@@ -21,15 +21,15 @@
         </div>
 
         @foreach (var item in Model)
-        {
-            <div class="carousel-item">
-                <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">@item.Baslik</h2>
-                    <p class="animate__animated animate__fadeInUp">@Html.Raw(item.Aciklama)</p>
-                    <a href="/Hizmet/Index/" class="btn-get-started animate__animated animate__fadeInUp">Daha Fazlası</a>
+            {
+                <div class="carousel-item">
+                    <div class="carousel-container">
+                        <h2 class="animate__animated animate__fadeInDown">@item.Baslik</h2>
+                        <p class="animate__animated animate__fadeInUp">@Html.Raw(item.Aciklama)</p>
+                        <a href="/Hizmet/Index/" class="btn-get-started animate__animated animate__fadeInUp">Daha Fazlası</a>
+                    </div>
                 </div>
-            </div>
-        }
+            }
 
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
@@ -87,7 +87,7 @@
             </div>
         </section><!-- End Services Section -->
         <!-- ======= Why Us Section ======= -->
-        <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200"id="hakkimizda">
+        <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200" id="hakkimizda">
             <div class="container">
 
                 <div class="row">
@@ -114,68 +114,68 @@
         </section><!-- End Why Us Section -->
         <!-- ======= Features Section ======= -->
         <section class="features" id="kategori">
-                    <div class="container">
+            <div class="container">
 
-                        <div class="section-title">
-                            <h2>Özellikler</h2>
-                            
-                        </div>
+                <div class="section-title">
+                    <h2>Özellikler</h2>
 
-                        <div class="row" data-aos="fade-up">
-                            <div class="col-md-5">
-                                <img src="/SiteLayout/assets/img/features-1.svg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-md-7 pt-4">
-                                <h3>Özellik 1</h3>
-                                <ul>
-                                    <li><i class="bi bi-check"></i>  Web sitesinin alan adı içeriğiyle alakalı olmalı ve firmayı iyi yansıtmalı</li>
-                                    <li><i class="bi bi-check"></i> Web sitesinin içeriği  geniş ve özgün içerik yapısına sahip olmalı ama karmaşık olmamalı</li>
-                                </ul>
-                            </div>
-                        </div>
+                </div>
 
-                        <div class="row" data-aos="fade-up">
-                            <div class="col-md-5 order-1 order-md-2">
-                                <img src="/SiteLayout/assets/img/features-2.svg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-md-7 pt-5 order-2 order-md-1">
-                                <h3>Özellik 2</h3>
-                                <p class="fst-italic">
-                                    •Menüler, ziyaretçilerin aradıklarını kolayca bulabilecekleri şekilde tasarlanmalı
-                                    Ziyaretçilerinizin size ulaşabileceği iletişim bilgileri ve iletişim formu olmalı
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="row" data-aos="fade-up">
-                            <div class="col-md-5">
-                                <img src="/SiteLayout/assets/img/features-3.svg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-md-7 pt-5">
-                                <h3>Özellik 2</h3>
-      
-                                <ul>
-                                    <li><i class="bi bi-check"></i> Logo ile grafik, yazı ve arka plan renkleri uyumlu olmalı</li>
-                                    <li><i class="bi bi-check"></i> Web sitesinde erişimde problem çıkartmayacak flash ve javascript uygulamaları olmalı</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="row" data-aos="fade-up">
-                            <div class="col-md-5 order-1 order-md-2">
-                                <img src="/SiteLayout/assets/img/features-4.svg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-md-7 pt-5 order-2 order-md-1">
-                                <h3>Özellik 4</h3>
-                                <p class="fst-italic">
-                                    • Web sitesi tüm tarayıcılarda düzgün ve sorunsuz çalışmalı (w3 standartları)
-                                    Arama motorlarına uygun meta taglar ve link yapısıyla(sef link) tasarlanmalı
-                                    Google ve diğer arama motorlarına kayıt edilmiş olmalı çünkü kimsenin sitenizden haberi yoksa web siteniz ne kadar iyi olursa olsun hiç bir anlam ifade etmez.
-                                </p>
-                            </div>
-                        </div>
-
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5">
+                        <img src="/SiteLayout/assets/img/features-1.svg" class="img-fluid" alt="">
                     </div>
-            </section>
+                    <div class="col-md-7 pt-4">
+                        <h3>Özellik 1</h3>
+                        <ul>
+                            <li><i class="bi bi-check"></i>  Web sitesinin alan adı içeriğiyle alakalı olmalı ve firmayı iyi yansıtmalı</li>
+                            <li><i class="bi bi-check"></i> Web sitesinin içeriği  geniş ve özgün içerik yapısına sahip olmalı ama karmaşık olmamalı</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5 order-1 order-md-2">
+                        <img src="/SiteLayout/assets/img/features-2.svg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 pt-5 order-2 order-md-1">
+                        <h3>Özellik 2</h3>
+                        <p class="fst-italic">
+                            •Menüler, ziyaretçilerin aradıklarını kolayca bulabilecekleri şekilde tasarlanmalı
+                            Ziyaretçilerinizin size ulaşabileceği iletişim bilgileri ve iletişim formu olmalı
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5">
+                        <img src="/SiteLayout/assets/img/features-3.svg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 pt-5">
+                        <h3>Özellik 2</h3>
+
+                        <ul>
+                            <li><i class="bi bi-check"></i> Logo ile grafik, yazı ve arka plan renkleri uyumlu olmalı</li>
+                            <li><i class="bi bi-check"></i> Web sitesinde erişimde problem çıkartmayacak flash ve javascript uygulamaları olmalı</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5 order-1 order-md-2">
+                        <img src="/SiteLayout/assets/img/features-4.svg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 pt-5 order-2 order-md-1">
+                        <h3>Özellik 4</h3>
+                        <p class="fst-italic">
+                            • Web sitesi tüm tarayıcılarda düzgün ve sorunsuz çalışmalı (w3 standartları)
+                            Arama motorlarına uygun meta taglar ve link yapısıyla(sef link) tasarlanmalı
+                            Google ve diğer arama motorlarına kayıt edilmiş olmalı çünkü kimsenin sitenizden haberi yoksa web siteniz ne kadar iyi olursa olsun hiç bir anlam ifade etmez.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
 </div><!-- End #main -->
